@@ -12,6 +12,7 @@ setwd("C:/Users/anniy/OneDrive/Desktop/NWKellog Assignment/NWKelloDataTest")
 
 library(readr) #to import .csv file
 library(dplyr) #for data frame manipulation
+library(rmarkdown) #to compile code document
 
 #########################################################
 
