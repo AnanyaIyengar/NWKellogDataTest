@@ -17,6 +17,7 @@ library(fastDummies) #to create dummy variables
 library(lmtest) #for coeftest()
 library(AER) #for durbinWatsonTest
 library(stargazer) #for tables
+library(psych) #for summary statistics
 library(sandwich) #for robust standard errors
 library(rmarkdown) #to compile code and results
 
@@ -69,9 +70,10 @@ redsoxcombined <- dplyr::bind_rows(redsox9, redsox10, redsox11, redsox12)
 
 #Exploratory Data Analysis 
 
-#Preliminary summary of data 
+#Preliminary summary of data by year
 
-summary(redsoxcombined)
+describeBy(redsoxcombined, group = "year")
+
 
 #Looking for NA observations
 
